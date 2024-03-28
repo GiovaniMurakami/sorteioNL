@@ -9,15 +9,16 @@
 
 <script>
     const button = document.body
+    console.log(button)
         let counter = 0
         button.addEventListener('mousemove', ()=>{
             button.style.pointerEvents = "none"
             const interval = setInterval(function(){
                 counter++
                 confetti()
-                if(counter == 50){
+                if(counter == 15){
                     clearInterval(interval)
                 }
-            }, 70)
+            }, 50)
         })
 </script>
