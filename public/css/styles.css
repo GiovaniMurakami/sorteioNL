@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #6610f2;
+    background-color: #4169e1;
     height: 100vh;
 }
 
@@ -33,9 +33,9 @@ body {
     font-weight: 900;
     font-size: 1.25rem;
     color: #fff;
-    background-color: #0066CC;
+    background-color: #4169e1;
     padding: 10px 30px;
-    border: solid #0066cc 3px;
+    border: solid #4169e1 3px;
     box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
     border-radius: 50px;
     transition: 1000ms;
@@ -51,8 +51,8 @@ body {
     padding: 10px 50px;
     transform: translateY(-0px);
     background-color: #fff;
-    color: #0066cc;
-    border: solid 3px #0066cc;
+    color: #4169e1;
+    border: solid 3px #4169e1;
 }
 
 .logo {

@@ -14,6 +14,7 @@ module.exports = class SorterController {
             winner.Name = capitalize(winner.Name);
             console.log(winner);
             if (!winner.Status) {
+                console.log("é falso");
                 SorterController.sorter(req, res);
                 return;
             }
