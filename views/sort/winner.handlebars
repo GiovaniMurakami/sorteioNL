@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="winner">
+        {{#if winner}}
+        <h1>Parabéns {{winner.Name}}!</h1>
+        {{/if}}
+    </div>
+</div>
+
+<script>
+    const button = document.body
+        let counter = 0
+        button.addEventListener('mousemove', ()=>{
+            button.style.pointerEvents = "none"
+            const interval = setInterval(function(){
+                counter++
+                confetti()
+                if(counter == 50){
+                    clearInterval(interval)
+                }
+            }, 70)
+        })
+</script>
