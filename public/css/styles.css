@@ -83,3 +83,11 @@ h2{
     margin-bottom: 1rem;
     color: #555;
 }
+
+.tip {
+    color: #555;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: .2rem;
+}
