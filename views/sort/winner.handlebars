@@ -1,7 +1,7 @@
 <div class="container">
     <div class="winner">
         {{#if winner}}
-        <h1>Parabéns {{winner.Name}}!</h1>
+        <h1>&#127881 Parabéns {{winner.Name}}! &#127881</h1>
         <h2>Contrato: {{winner.ID}}</h2>
         {{/if}}
     </div>
@@ -9,16 +9,15 @@
 
 <script>
     const button = document.body
-    console.log(button)
-        let counter = 0
-        button.addEventListener('mousemove', ()=>{
-            button.style.pointerEvents = "none"
-            const interval = setInterval(function(){
-                counter++
-                confetti()
-                if(counter == 15){
-                    clearInterval(interval)
-                }
-            }, 50)
+    let counter = 0
+    button.addEventListener('mousemove', ()=>{
+        button.style.pointerEvents = "none"
+        const interval = setInterval(function(){
+            counter++
+            confetti()
+            if(counter == 15){
+                clearInterval(interval)
+            }
+        }, 50)
         })
 </script>
