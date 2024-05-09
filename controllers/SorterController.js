@@ -5,10 +5,18 @@ module.exports = class SorterController {
     static sort(req, res) {
         res.render("sort/home");
     }
+
     static async sorter(req, res) {
         try {
+            const config = {
+                auth: {
+                    username: "navelinknet",
+                    password: "p9d7EP9sPpiFvdqP9epw",
+                },
+            };
             const response = await axios.get(
-                "http://192.168.17.113/sorteio-api/sorteio/api/v1/winner.php"
+                "http://192.168.17.113:8000/api/v2/public/",
+                config
             );
             const winner = response.data;
             winner.Name = capitalize(winner.Name);
