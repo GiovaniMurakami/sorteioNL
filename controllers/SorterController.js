@@ -16,10 +16,7 @@ module.exports = class SorterController {
                     password: process.env.API_PASSWORD,
                 },
             };
-            const response = await axios.get(
-                "http://192.168.17.113:8000/api/v2/public/",
-                config
-            );
+            const response = await axios.get(process.env.API_ADRESS, config);
             const winner = response.data;
             winner.Name = capitalize(winner.Name);
             console.log(winner);
