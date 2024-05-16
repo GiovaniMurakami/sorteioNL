@@ -7,11 +7,13 @@ module.exports = class SorterController {
     }
 
     static async sorter(req, res) {
+        console.log(process.env.API_USERNAME);
         try {
             const config = {
                 auth: {
-                    username: "navelinknet",
-                    password: "p9d7EP9sPpiFvdqP9epw",
+                    username: process.env.API_USERNAME,
+                    USERNAME,
+                    password: process.env.API_PASSWORD,
                 },
             };
             const response = await axios.get(
