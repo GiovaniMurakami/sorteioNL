@@ -6,16 +6,22 @@ Esse projeto tem como objetivo implementar uma interface que garanta a demonstra
 
 ### Como instalar
 
-    Clone o respositório para dentro do seu diretório de trabalho
+Clone o respositório para dentro do seu diretório de trabalho
 
-    ```bash
-    gitclone https://github.com/GiovaniMurakami/sorteioNL.git
-    ```
+```bash
+gitclone https://github.com/GiovaniMurakami/sorteioNL.git
+```
 
-    Para iniciar os serviços listados dentro do arquivo docker-compose.yml (Certifique-se de ter o docker instalado em sua máquina de trabalho)
+Instale as dependências do projeto
 
-    ```bash
-    docker compose up
-    ```
+```bash
+npm i
+```
 
-    A aplicação ficará disponível na portal 3000 do seu endereço de Loopback.
+Para iniciar os serviços listados dentro do arquivo docker-compose.yml (Certifique-se de ter o docker instalado em sua máquina de trabalho)
+
+```bash
+docker compose up
+```
+
+A aplicação ficará disponível na portal 3000 do seu endereço de Loopback.
