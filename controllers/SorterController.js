@@ -19,9 +19,7 @@ module.exports = class SorterController {
             const response = await axios.get(process.env.API_ADRESS, config);
             const winner = response.data;
             winner.Name = capitalize(winner.Name);
-            console.log(winner);
             if (!winner.Status) {
-                console.log("é falso");
                 SorterController.sorter(req, res);
                 return;
             }
