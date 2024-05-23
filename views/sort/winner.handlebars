@@ -5,19 +5,28 @@
         <h2>Contrato: {{winner.ID}}</h2>
         {{/if}}
     </div>
+    <div class="btn-container">
+        <button class="btn"  onclick="backToHome()">Sorteie Novamente</button>
+    </div>
 </div>
 
 <script>
-    const button = document.body
+    window.onload = function(){
+        startConfetti()
+    }
+
+    function backToHome(){
+        window.location.href= '/'
+    }
+
+    function startConfetti(){
     let counter = 0
-    button.addEventListener('mousemove', ()=>{
-        button.style.pointerEvents = "none"
         const interval = setInterval(function(){
             counter++
             confetti()
-            if(counter == 15){
+            if(counter == 20){
                 clearInterval(interval)
             }
         }, 50)
-        })
+    }
 </script>

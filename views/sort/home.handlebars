@@ -1,8 +1,22 @@
 <div class="container">
+    <div class="c-loader"></div>
     <div class="intro">
         <p>Quem será o sorteado? &#127873;</p>
     </div>
-    <div>
-        <button class="btn" onclick="window.location.href='/sort'">Sorteie um cliente</button>
+    <div class="btn-container">
+        <button class="btn" onclick="loading()">Sorteie um cliente</button>
     </div>
 </div>
+
+<script>
+    function loading(){
+        const intro = document.querySelector('.intro')
+        const loader = document.querySelector('.c-loader')
+        const btnContainer = document.querySelector('.btn-container')
+
+        intro.style.display = "none"
+        btnContainer.style.display = 'none'
+        loader.style.display = 'block';
+        window.location.href = '/sort'
+    }
+</script>

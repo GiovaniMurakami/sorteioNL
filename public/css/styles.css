@@ -72,6 +72,7 @@ body {
     font-size: 0.8em;
     color: #444;
     font-weight: bold;
+    margin-bottom: 2vh;
 }
 
 h2{
@@ -83,4 +84,20 @@ h2{
     font-weight: bold;
     margin-bottom: 1rem;
     color: #555;
+}
+
+.c-loader {
+    animation: is-rotating 1s infinite;
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    border: 6px solid #e5e5e5;
+    border-top-color: royalblue;
+    display: none;
+}
+
+@keyframes is-rotating {
+    to {
+        transform: rotate(1turn);
+    }
 }
