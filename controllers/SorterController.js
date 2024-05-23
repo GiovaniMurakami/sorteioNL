@@ -9,6 +9,7 @@ module.exports = class SorterController {
         const winner = await sortClient.sortClient();
         if (winner) {
             res.render("sort/winner", { winner });
+            return;
         }
         SorterController.sorter();
     }

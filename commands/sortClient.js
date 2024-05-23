@@ -1,24 +1,36 @@
 const capitalize = require("../helpers/capitalize");
-const axios = require("axios");
 const SorterController = require("../controllers/SorterController");
 
 async function sortClient() {
     try {
         const config = {
-            auth: {
-                username: process.env.API_USERNAME,
-                password: process.env.API_PASSWORD,
+            headers: {
+                Authorization:
+                    "Basic " +
+                    Buffer.from(
+                        "navelinknet" + ":" + "p9d7EP9sPpiFvdqP9epw"
+                    ).toString("base64"),
             },
         };
-        const response = await axios.get(process.env.API_ADRESS, config);
-        const winner = response.data;
+        const response = await fetch(
+            "http://ec2-18-188-82-166.us-east-2.compute.amazonaws.com",
+            config
+        );
+
+        if (!response.ok) {
+            throw new Error(
+                "Erro ao fazer a solicitação: " +
+                    response.status +
+                    " " +
+                    response.statusText
+            );
+        }
+
+        const winner = await response.json();
         winner.Name = capitalize(winner.Name);
         return winner;
     } catch (error) {
-        console.error(
-            "Ocorreu um erro com a solicitação: ",
-            error.response.status
-        );
+        console.error("Ocorreu um erro com a solicitação: ", error);
     }
 }
 
