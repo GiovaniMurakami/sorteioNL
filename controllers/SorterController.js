@@ -34,4 +34,13 @@ module.exports = class SorterController {
         }
         res.render("sort/list", { showWinners });
     }
+
+    static async removeAll(req, res) {
+        try {
+            await Winner.destroy({ where: {} });
+            res.redirect("list");
+        } catch (e) {
+            console.log(e);
+        }
+    }
 };

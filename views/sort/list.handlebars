@@ -11,7 +11,11 @@
             {{/each}}
             </ul>
         </div>
+        <form action="/remove" method="POST">
+            <input type="submit" value="Excluir" class="btn">
+        </form>
     {{else}}
         <h1>Ainda não sorteou ninguém</h1>
     {{/if}}
+
 </div>
