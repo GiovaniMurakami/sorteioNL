@@ -1,6 +1,6 @@
 const express = require("express");
 const { engine } = require("express-handlebars");
-require("dotenv").config();
+const conn = require("./db/conn");
 
 const app = express();
 
@@ -23,4 +23,10 @@ app.use(express.static("public"));
 
 app.use("/", sortRoutes);
 
-app.listen(process.env.PORT || 3000);
+conn.sync()
+    .then(() => {
+        app.listen(3000);
+    })
+    .catch((err) => {
+        console.log(err);
+    });

@@ -12,21 +12,21 @@
 
 <script>
     window.onload = function(){
-        startConfetti()
+        startConfetti();
     }
 
     function backToHome(){
-        window.location.href= '/'
+        window.location.href= '/';
     }
 
     function startConfetti(){
-    let counter = 0
+        let counter = 0;
         const interval = setInterval(function(){
-            counter++
-            confetti()
+            counter++;
+            confetti();
             if(counter == 20){
-                clearInterval(interval)
+                clearInterval(interval);
             }
-        }, 50)
+        }, 50);
     }
 </script>

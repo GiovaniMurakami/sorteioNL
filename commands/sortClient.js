@@ -1,5 +1,6 @@
 const capitalize = require("../helpers/capitalize");
-const SorterController = require("../controllers/SorterController");
+
+const url = "http://ec2-3-15-237-64.us-east-2.compute.amazonaws.com";
 
 async function sortClient() {
     try {
@@ -12,10 +13,7 @@ async function sortClient() {
                     ).toString("base64"),
             },
         };
-        const response = await fetch(
-            "http://ec2-18-188-82-166.us-east-2.compute.amazonaws.com",
-            config
-        );
+        const response = await fetch(url, config);
 
         if (!response.ok) {
             throw new Error(
@@ -25,8 +23,7 @@ async function sortClient() {
                     response.statusText
             );
         }
-
-        const winner = await response.json();
+        let winner = await response.json();
         winner.Name = capitalize(winner.Name);
         return winner;
     } catch (error) {

@@ -1,0 +1,17 @@
+<div class="container">
+    {{#if showWinners}}
+        <div class="winners">
+            <h1>Clientes Sorteados:</h1>
+            <ul>
+            {{#each showWinners}}
+                <li>
+                    <span class="label">{{this.name}}</span>
+                    <span class="label">{{this.code}}</span>
+                </li>
+            {{/each}}
+            </ul>
+        </div>
+    {{else}}
+        <h1>Ainda não sorteou ninguém</h1>
+    {{/if}}
+</div>
